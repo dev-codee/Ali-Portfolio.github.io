@@ -1457,3 +1457,244 @@ footer {
 .delay-5 {
     animation-delay: 1s;
 }
+/* Enhanced Mobile Responsiveness */
+
+/* Base Mobile Fixes */
+@media (max-width: 768px) {
+    html {
+      font-size: 50%; /* Slightly reduce base font size */
+    }
+    
+    .container {
+      padding: 0 2rem;
+    }
+    
+    section {
+      padding: 8rem 0; /* Reduce section padding */
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      height: auto;
+      padding-top: 8rem;
+      padding-bottom: 5rem;
+    }
+    
+    .hero-content .title {
+      font-size: 4rem;
+      line-height: 1.2;
+    }
+    
+    .hero-content .description {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 2.5rem;
+    }
+    
+    .image-wrapper {
+      width: 280px;
+      height: 280px;
+    }
+    
+    /* Improved Timeline Section */
+    .timeline-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .timeline-marker {
+      margin-bottom: 1.5rem;
+    }
+    
+    .timeline-info {
+      width: 100%;
+    }
+  }
+  
+  /* Small Phones */
+  @media (max-width: 576px) {
+    html {
+      font-size: 48%;
+    }
+    
+    .hero-content .title {
+      font-size: 3.6rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .cta-buttons .btn {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+    
+    /* Section Headers */
+    .section-header .title {
+      font-size: 3.2rem;
+    }
+    
+    .section-header .subtitle {
+      font-size: 1.6rem;
+    }
+    
+    /* Projects Section */
+    .projects-filter {
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    
+    .filter-btn {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+      max-width: 100%;
+    }
+    
+    /* Skills Section */
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    /* Contact Form */
+    .contact-form {
+      padding: 2.5rem 2rem;
+    }
+    
+    .form-group {
+      margin-bottom: 2.5rem;
+    }
+    
+    /* About Section */
+    .about-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .about-card {
+      padding: 2.5rem 2rem;
+    }
+    
+    /* Footer */
+    .footer-content {
+      gap: 3rem;
+    }
+    
+    .footer-links, .footer-social {
+      width: 100%;
+    }
+  }
+  
+  /* Extra Small Phones */
+  @media (max-width: 375px) {
+    html {
+      font-size: 45%;
+    }
+    
+    .hero-content .title {
+      font-size: 3.2rem;
+    }
+    
+    .typewriter {
+      font-size: 1.8rem;
+    }
+    
+    .image-wrapper {
+      width: 220px;
+      height: 220px;
+    }
+    
+    .project-tech {
+      flex-wrap: wrap;
+    }
+    
+    .project-tech span {
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-info {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+      padding: 2rem;
+    }
+  }
+  
+  /* Fix for navigation menu on mobile */
+  @media (max-width: 768px) {
+    nav {
+      width: 80%;
+      padding: 8rem 2rem 2rem 2rem;
+      z-index: 1000;
+      background-color: var(--bg-color);
+      border-left: 1px solid var(--border-color);
+    }
+    
+    nav ul li a {
+      font-size: 2rem;
+    }
+    
+    .hamburger {
+      position: relative;
+      z-index: 1001;
+    }
+    
+    /* Adjust header height for mobile */
+    header {
+      padding: 1.5rem 0;
+    }
+    
+    /* Make sure the logo is visible on mobile */
+    .logo {
+      font-size: 2.4rem;
+      z-index: 1001;
+      position: relative;
+    }
+    
+    /* Fix mobile overflow issues */
+    .container {
+      overflow-x: hidden;
+    }
+    
+    body {
+      overflow-x: hidden;
+    }
+  }
+  
+  /* Fix for hover states on touch devices */
+  @media (hover: none) {
+    .btn:hover,
+    .project-card:hover,
+    .service-card:hover .card-front,
+    .service-card:hover .card-back,
+    .timeline-item:hover .timeline-info,
+    .contact-card:hover,
+    .about-card:hover,
+    .social-icon:hover,
+    .footer-social .social-icons a:hover {
+      transform: none;
+    }
+    
+    .project-card:active {
+      transform: translateY(-5px);
+    }
+    
+    .btn:active {
+      transform: translateY(-2px);
+    }
+  }
